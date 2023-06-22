@@ -714,7 +714,7 @@ header{
 .project-button{
   font-family: "Red Hat Text", sans-serif;
   height: 2em;
-  width: 50%;
+  width: 70%;
   border-radius: 4em;
   background-color: rgb(35, 41, 49, 0.8);
   border-color: transparent;
@@ -726,6 +726,9 @@ header{
 }
 /*******SMALLSCREEN*************/
 @media (max-width: 1024px){
+  .project-details{
+    width: 300px;
+  }
 }
 /***********TABLET*******************/
 @media (max-width: 800px) {
@@ -734,6 +737,9 @@ header{
   }
   .project-section{
     flex-direction: column;
+  }
+  .project-button{
+    width: 100%;
   }
 }
 @media (max-width: 600px) {
