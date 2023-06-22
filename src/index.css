@@ -409,7 +409,7 @@ header{
     font-size: 0px;
   }
   .hero-right{
-    height: 80%;
+    height: 40%;
   }
 }
 /*Section*/
@@ -424,10 +424,10 @@ header{
 .section2{
   padding:3em;
   background-color: var(--sparecol);
-  padding-left: 10em;
-  padding-right: 10em;
+  padding-left: 6em;
+  padding-right: 6em;
   width: 100%;
-  height: 100vh;
+  height: auto;
   align-items: center;
   justify-content: center;
 }
@@ -630,6 +630,112 @@ header{
   }
 }
 
+/*************TIME LINE***************/
+.timeline{
+  position:relative;
+  width:100%;
+}
+.timeline-container{
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+}
+.timeline-textbox{
+  padding: 10px 20px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  font-size: 15px;
+}
+.left-container{
+  left: 0;
+}
+.right-container{
+  left: 50%;
+}
+.timeline-container img{
+  position: absolute;
+  width: 60px;
+  border-radius: 50%;
+  right: -30px;
+  top: 32px;
+  z-index: 1;
+}
+.right-container img{
+  left: -30px;
+}
+.timeline::after{
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background:white;
+  top:0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: 0;
+}
+.timeline-textbox h2{
+  font-weight: 600;
+  font-family: ;
+}
+.timeline-textbox small{
+  display: inline-block;
+  margin-bottom:15px;
+}
+.left-container-arrow{
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid white;
+  right: -20px;
+}
+.right-container-arrow{
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid white;
+  left: -20px;
+}
+/***************RESPONSIVENESS*****************/
+@media (max-width: 800px) {
+  .timeline{
+    margin: 50px auto;
+  }
+  .timeline::after{
+    left: 40px;
+  }
+  .timeline-container{
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
+  }
+  .timeline-textbox{
+    font-size: 13px;
+  }
+  .timeline-textbox{
+    margin-bottom: 10px;
+  }
+  .right-container{
+    left: 0;
+  }
+  .left-container img, .right-container img{
+    left: 10px;
+  }
+  .left-container-arrow, .right-container-arrow{
+    border-right: 15px solid #fff;
+    border-left: 0;
+    left: 15px;
+  }
+}
 /*Project*/
 .project-section{
   height: auto;
