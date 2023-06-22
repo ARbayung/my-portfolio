@@ -9,12 +9,12 @@ function Navbar(){
             <ul class=" navbar flex">
                 
                 <li><a class="nav-item" href="#Home">HOME</a></li>
+
+                <li><a class="nav-item" href="#About" >ABOUTME</a></li>
     
                 <li><a class="nav-item" href="#Project"> PROJECTS</a></li>
                
                 <li><a class="nav-item" href="" >CONTACTME</a></li>
-
-                <li><a class="nav-item" href="#About" >ABOUTME</a></li>
                 
             </ul>
         </div>

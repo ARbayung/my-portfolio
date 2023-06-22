@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faReact, faCss3, faBootstrap, faHtml5 } from "@fortawesome/free-brands-svg-icons";
 
 function Aboutme(){
-    return <section id="About" class="section2">
+    return <section id="About" class="section2 flex">
                 <div class="about-section flex">
                     <div class="about-text">
                     <h2 class="section-sub2">MY SKILLS</h2>
