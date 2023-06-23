@@ -4,7 +4,7 @@ import { faReact, faCss3, faBootstrap, faHtml5 } from "@fortawesome/free-brands-
 
 function Aboutme(){
     return <section id="About" class="section2 flex">
-                <div class="about-section flex">
+                <div class="about-section flex reveal">
                     <div class="about-text">
                     <h2 class="section-sub2">MY SKILLS</h2>
                     <h1 class="section-title2">EXPERIENCES.</h1>

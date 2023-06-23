@@ -4,7 +4,7 @@ import grandir from "./images/grandir.png";
 
 function Timeline(){
     return <div class="section2">
-                <div class="timeline">
+                <div class="timeline reveal">
                     <div class="timeline-container left-container">
                         <img src={niku}></img>
                         <div class="timeline-textbox">
