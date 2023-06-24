@@ -92,6 +92,10 @@ h1, h2, h3, p{
   text-wrap: balance;
 }
 
+h1, h2, h3, p, small, li{
+  font-family: "Red Hat Text", sans-serif;
+}
+
 .flex{
   display: flex;
 }
@@ -133,7 +137,7 @@ h1, h2, h3, p{
   position: relative;
   transform: translateY(150px);
   opacity: 0;
-  transition: all 2s ease;
+  transition: all 1s ease;
 }
 .reveal.active{
   transform: translateY(0px);
@@ -294,14 +298,21 @@ header{
 }
 .hero-h1{
   padding-bottom: 0.3em;
-  font-size: 4em;
+  font-size: 3.7em;
+  font-weight:lighter;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(255, 68, 0, 0.8);
+}
+.hero-h2{
+  padding-bottom: 0.3em;
+  font-size: 3.7em;
   font-weight:lighter;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: rgb(255, 68, 0, 0.8);
 }
 .hero-p{
   margin-top: -1em;
-  font-size: 17.5px;
+  font-size: 16px;
   font-family: "Red Hat Text", sans-serif;
   color: white;
   z-index: 1;
@@ -330,8 +341,9 @@ header{
   width: 100%;
   height: auto;
   text-align: right;
-  background-color: red;
+
 }
+
 .my-name{
   position: fixed;
   top: 1em;
@@ -349,7 +361,7 @@ header{
 .hero-slogan{
   color: whitesmoke;
   font-style: italic;
-  right: 12px;
+  right: 15px;
   font-family: "Red Hat Text", sans-serif;
   font-size: 1.5em;
 }
@@ -389,11 +401,20 @@ header{
   .button-hero{
     width: 100%;
   }
+  .hero-h2{
+    font-size: 0em;
+  }
+  .slogan{
+    position: absolute;
+    width: 8em;
+    top: 80px;
+    right: -20px;
+  }
 }
 /*********phone***********/
 @media (max-width: 500px) {
   .hero-h1{
-    font-size: 3em;
+    font-size: 2.7em;
   }
   .hero-right{
     height: 60%;
@@ -405,7 +426,7 @@ header{
 
 @media (max-height:500px){
   .hero-h1{
-    font-size: 2em;
+    font-size: 4em;
   }
   .profile{
     width: 50%;
@@ -415,16 +436,15 @@ header{
   }
 }
 @media (max-width:400px){
-  .hero-p{
-    font-size: 0px;
-  }
+
+
   .hero-right{
     height: 40%;
   }
 }
 /*Section*/
 .section{
-  padding:3em;
+  padding:5em;
   background-color: var(--sectioncol);
   padding-left: 12em;
   padding-right: 5em;
@@ -451,7 +471,7 @@ header{
   font-size: 2em;
   text-align:left;
   font-family: "Red Hat Text", sans-serif;
-  color: rgb(255, 69, 0, 0.8);
+  color: #dc1c31;
   border-color: #ff4500;
 }
 .section-title2{
@@ -491,6 +511,8 @@ header{
 .about-section{
   justify-content: space-between;
   overflow: hidden;
+  padding-left: 2.5em;
+  padding-top: 4em;
 }
 .about-icons{
   padding: 2em;
@@ -574,15 +596,15 @@ header{
 	40% {transform: translateY(-15px);}
 	60% {transform: translateY(-7.5px);}
 }
-/*******SMALLSCREEN*************/
+/*******SMALLSCREEN* computer************/
 @media (max-width: 1024px){
   .section{
     padding-left: 8em;
     padding-right: 2em;
   }
   .section2{
-    padding-left: 8em;
-    padding-right: 2em;
+    padding-left: 4em;
+    padding-right: 3em;
   }
   .section-title{
     font-size: 2em ;
@@ -602,7 +624,7 @@ header{
   }
   .section2{
     padding:1em;
-    padding-left: 5em;
+    padding-left: 3em;
     padding-right: 4em;
   }
   .about-text{
@@ -620,6 +642,9 @@ header{
     row-gap: 30px;
     width: 100%;
   }
+  .about-section{
+    padding-left: 2em;
+  }
 }
 
 /*******MOBILEMODE**************/
@@ -629,7 +654,7 @@ header{
     padding-right: .5em;
   }
   .section2{
-    padding-left: 3em;
+    padding-left: 2em;
     padding-right: 3.5em;
   }
   .project-section{
@@ -644,11 +669,13 @@ header{
 .timeline{
   position:relative;
   width:100%;
+  padding-bottom: 4em;
 }
 .timeline-container{
   padding: 10px 50px;
   position: relative;
   width: 50%;
+  margin-bottom: 2em;
 }
 .timeline-textbox{
   padding: 10px 20px;
@@ -665,33 +692,36 @@ header{
 }
 .timeline-container img{
   position: absolute;
-  width: 60px;
+  width: 40px;
   border-radius: 50%;
-  right: -30px;
+  right: -19px;
   top: 32px;
   z-index: 1;
 }
 .right-container img{
-  left: -30px;
+  left: -20px;
+  z-index: 1;
 }
 .timeline::after{
   content: "";
   position: absolute;
-  width: 5px;
-  height: 100%;
-  background: rgb(245, 245, 245, 0.4);
+  width: 3px;
+  height: 80%;
+  background:rgb(245, 245, 245, 0.8);
   top:0;
   left: 50%;
   margin-left: -3px;
-  z-index: 0;
+  z-index: -1;
 }
 .timeline-textbox h2{
   font-weight: 600;
-  font-family: ;
+  color: rgb(0, 128, 255, 0.8);
 }
 .timeline-textbox small{
   display: inline-block;
   margin-bottom:15px;
+  position: absolute;
+  top:-2em;
 }
 .left-container-arrow{
   height: 0;
@@ -699,10 +729,10 @@ header{
   position: absolute;
   top: 28px;
   z-index: 1;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-left: 20px solid  rgb(245, 245, 245, 0.4);
-  right: -20px;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid  rgb(245, 245, 245, 0.4);
+  right: -15px;
 }
 .right-container-arrow{
   height: 0;
@@ -710,10 +740,10 @@ header{
   position: absolute;
   top: 28px;
   z-index: 1;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-right: 20px solid rgb(245, 245, 245, 0.4);
-  left: -20px;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid rgb(245, 245, 245, 0.4);
+  left: -14.5px;
 }
 /***************RESPONSIVENESS*****************/
 @media (max-width: 800px) {
@@ -738,24 +768,24 @@ header{
     left: 0;
   }
   .left-container img, .right-container img{
-    left: 10px;
+    left: 18px;
   }
   .left-container-arrow, .right-container-arrow{
     border-right: 15px solid  rgb(245, 245, 245, 0.4);
     border-left: 0;
-    left: -12px;
+    left: -15px;
   }
 }
 /*Project*/
 .project-section{
   height: auto;
+  padding: 1em;
   width: 100%;
   margin-top: 0.7em;
   margin-left: -3em;
   background-color:  rgb(0, 0, 0, 0.5);
 }
 .project-text{
-  background-color: ;
   flex-direction: column;
   text-align: center;
   width: 35%;
@@ -805,7 +835,7 @@ header{
 }
 
 .project-details{
-  background-color: rgb(255, 69, 0, 0.5);
+  background-color: rgb(220, 28, 49, 0.4);
   height: 100%;
   padding: 0.5em;
   border-bottom-left-radius: 5px;
@@ -862,6 +892,9 @@ header{
   .project-details{
     width: 250px;
   }
+  .project-details{
+    width: 100%;
+  } 
   .project-container{
     flex-direction: column;
     overflow-x: hidden;
@@ -870,4 +903,31 @@ header{
 }
 /*Footer*/
 
-html{scroll-behavior:smooth}
+.footer{
+  padding: 3em;
+  background-color: var(--sparecol);
+  justify-content: space-between;
+  width: auto;
+}
+.footer li{
+  list-style: none;
+}
+.footer p{
+padding: 1em;
+}
+.footer h3{
+  font-weight: 50;
+}
+
+@media (max-width: 800px) {
+  .footer{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .footer ul{
+    text-align:  center;
+    margin-right: 2em;
+  }
+}

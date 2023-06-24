@@ -20,7 +20,7 @@ function reveal(){
     
     var windowheight = window.innerHeight;
     var revealtop = reveals[i].getBoundingClientRect().top;
-    var revealpoint = 150;
+    var revealpoint = 100;
 
     if(revealtop < windowheight - revealpoint){
       reveals[i].classList.add("active");
@@ -37,6 +37,7 @@ root.render(
     <Aboutme/>
     <Timeline/>
     <Project/>
+    <Footer/>
   </React.StrictMode>
 );
 
