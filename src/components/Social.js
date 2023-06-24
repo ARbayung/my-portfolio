@@ -6,8 +6,8 @@ function Social(){
     return <div class="hero-right flex">
                 <div class="hero-right-sticky flex center">
                     <p class="hero-slogan">FRONTEND DEV</p>
-                    <FontAwesomeIcon icon={faLinkedin} class="nav-icon"/>
-                    <FontAwesomeIcon icon={faGithub} class="nav-icon"/>
+                    <a href="https://www.linkedin.com/in/abiskar-rai/"><FontAwesomeIcon icon={faLinkedin} class="nav-icon"/></a>
+                    <a href="https://github.com/ARbayung"><FontAwesomeIcon icon={faGithub} class="nav-icon"/></a>
                 </div>
             </div> 
 }

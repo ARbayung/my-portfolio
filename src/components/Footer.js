@@ -1,7 +1,7 @@
 import React from "react";
 
 function Footer(){
-    return <footer class="footer flex">
+    return <footer id="Footer" class="footer flex">
         <div>
             <ul>
                 <h3>CONTACT ME</h3>
@@ -10,6 +10,7 @@ function Footer(){
                 <li>Phone: 07845011585</li>
             </ul>
         </div>
+        <p>© Design and Development by Abiskar Rai</p>
         <div>
             <ul>
                 <h3>PHOTOGRAPHY</h3>
@@ -18,10 +19,6 @@ function Footer(){
                 <li>Instagram: drfrncscbys.xx</li>
             </ul>
         </div>
-        
-        <p>© Design and Development by Abiskar Rai</p>
-        
-
     </footer>
 }
 
