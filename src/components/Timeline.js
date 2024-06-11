@@ -1,40 +1,31 @@
 import React from "react";
-import niku from "./images/nikubar.png";
-import grandir from "./images/grandir.png";
 import EdX from "./images/EdX.png";
+import SinclairLondon from "./images/SinclairLondon.jpg";
 
 function Timeline(){
     return <div class="section2">
-                <div class="timeline reveal">
+        <div class="timeline reveal">
                     <div class="timeline-container left-container reveal">
+                        <img src={SinclairLondon}></img>
+                        <div class="timeline-textbox">
+                            <small>Serptember 2023 - December 2023</small>
+                            <h2>SinclairLondon</h2>
+                            <p>I was offered a fast pace learning environment, with lots of projects with real life impact. Alongside another intern web developer, I was engaged in a rewarding experience where I was trusted to make real impact to an excisting business. I was trusted to redesign their Loyalty scheme, create an SEO strategy, and enchance the UI. SinclairLondon was Shopify based which was a new experience for myself which I found alien at first but quickly adapted to the CMS. Additionally I experienced making custom components using liquid, and using plugins such as Smile.io and Klaviyo. Additionally the director, Alicya Sinclair taught me about important soft skills such as time management and effective communication.</p>
+                            <span class="left-container-arrow"></span>
+                        </div>
+                    </div>
+                
+                <div class="timeline reveal">
+                    <div class="timeline-container right-container reveal">
                         <img src={EdX}></img>
                         <div class="timeline-textbox">
-                            <small>2022-2023</small>
-                            <h2>EdX</h2>
-                            <p>I have successfully completed a rigorous six-month interactive Front-End Development Bootcamp, which encompassed comprehensive training in essential programming languages and frameworks. Through this immersive learning experience, I have acquired a solid foundation in front-end development principles and gained practical expertise in utilizing these technologies to build dynamic and responsive web applications.</p>
+                            <small>October 2022 - April 2023</small>
+                            <h2>EDX</h2>
+                            <p>I was lucky enough to have an amazing Mentor who had great positions in big tech companies such as Amazon. I learnt about all of the basics of Web development engaging in interactive lessons with oppertunities to test out theory with practical challanges. I found that having a challange to work on over the weekend was both equally challanging and fun! I had a realisaton that this is something I would love to make into a career. A project I was proud of was the 'recipe finder' app. The idea of the app was to use a opensource API to grab recipes and display for the users accordingly to the prompt. I got to use Github in a group dynamic and was able to experience challanges in managing the version control system giving me valuable knowledge. I am now looking for a position to use my skills and advance in my career as a developer.</p>
                             <span class="left-container-arrow"></span>
                         </div>
                     </div>
-                    <div class="timeline-container right-container reveal">
-                        <img src={grandir}></img>
-                        <div class="timeline-textbox">
-                        <small>2020-2023</small>
-                            <h2>Grandir</h2>
-                            <p>
-I have gained valuable experience working within a preschool environment, where I have been committed to upholding the principles of safeguarding and promoting healthy developmental outcomes for children as they prepare for the transition to primary school</p>
-                            <span class="right-container-arrow"></span>
-                        </div>
-                    </div>
-                     <div class="timeline-container left-container reveal">
-                        <img src={niku}></img>
-                        <div class="timeline-textbox">
-                            <small>2020-2023</small>
-                            <h2>Grandir</h2>
-                            <p>
-I effectively directed the day-to-day operations of a vibrant cocktail bar and restaurant, skillfully navigating a high-energy setting characterized by fast-paced activities, frequent table turnovers, and a significant number of functions and events.</p>
-                            <span class="left-container-arrow"></span>
-                        </div>
-                    </div> 
+                </div>
                 </div>
             </div>
 }

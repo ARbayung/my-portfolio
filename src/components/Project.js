@@ -6,12 +6,12 @@ import Recipe from "./images/recipe-finder.png"
 import ReadME from "./images/readme.png"
 
 function Project(){
-    return<section id="Project" class="section">
-        <div class="project-section reveal flex">
-            <div class="project-text flex">
+    return<section id="Project" class="section flex">
+        <div class="project-section flex">
+            <div class="project-text  reveal">
                 <h2 class="section-sub">MY WORK</h2>
                 <h1 class="section-title">MY PROJECTS.</h1>
-                <p class="section-p">During my tenure in a comprehensive web development bootcamp, I have actively engaged in a multitude of projects, adeptly navigating the challenges presented both independently and collaboratively within group settings. </p>
+                <p class="section-p">This is the project sub title</p>
             </div>
             <ul class="project-container flex">
                 <li class="project-item">
