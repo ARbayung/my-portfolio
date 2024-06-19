@@ -3,10 +3,9 @@ import React from "react";
 
 function Navbar(){
     return <nav>
-        <div class="container-nav flex">
             <h1 class="logo">AR</h1>
             <hr class="hr-nav"></hr>
-            <ul class=" navbar flex">
+            <ul class="navbar flex">
                 
                 <li><a class="nav-item" href="#Home">HOME</a></li>
 
@@ -15,9 +14,14 @@ function Navbar(){
                 <li><a class="nav-item" href="#Project"> PROJECTS</a></li>
                
                 <li><a class="nav-item" href="#Footer" >CONTACTME</a></li>
-                
+            
             </ul>
-        </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        
     </nav>
 }
 
