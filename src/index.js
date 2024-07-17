@@ -10,7 +10,6 @@ import Project from './components/Project';
 import Social from './components/Social';
 import Timeline from './components/Timeline';
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 window.addEventListener("scroll", reveal);
 function reveal(){
