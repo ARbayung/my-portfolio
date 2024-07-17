@@ -11,11 +11,9 @@ function Social(){
         const landingPageHeight = window.innerHeight; // Height of the viewport
 
             if (window.scrollY > landingPageHeight/3) {
-                // target.classList.remove("hero-right");
                 target.classList.add("hero-right-disappear");
                 console.log(target.classList);
             } else {
-                // target.classList.add("hero-right");
                 target.classList.remove("hero-right-disappear");
                 console.log("delete");
             }
@@ -35,8 +33,8 @@ function Social(){
             <div className="hero-right flex" id="right">
               <div class="flex center">
                     <p class="hero-slogan">FIND ME AT</p>
-                    <a href="https://www.linkedin.com/in/abiskar-rai/"><FontAwesomeIcon icon={faLinkedin} class="nav-icon"/></a>
-                    <a href="https://github.com/ARbayung"><FontAwesomeIcon icon={faGithub} class="nav-icon"/></a>
+                    <a href="https://www.linkedin.com/in/abiskar-rai/"><FontAwesomeIcon icon={faLinkedin} class="nav-icon" alt="LinkedinIcon"/></a>
+                    <a href="https://github.com/ARbayung"><FontAwesomeIcon icon={faGithub} class="nav-icon" alt="GithubIcon"/></a>
                 </div>
             </div>
           )}

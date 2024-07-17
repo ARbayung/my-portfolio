@@ -1,9 +1,5 @@
 import React from "react";
-import project from "./images/project.png"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Furnishly from "./images/furnishly.png"
 import Recipe from "./images/recipe-finder1.png"
-import ReadME from "./images/readme.png"
 import SinclairLondon from "./images/sinclairlondon.png"
 
 function Project(){
@@ -15,7 +11,7 @@ function Project(){
                 </div>
                 
                 <div class="project-item reveal" id="project1">
-                    <a href="https://sinclairlondon.com/pages/prive" class="project-button"><img src={SinclairLondon} class="project-img"></img></a>
+                    <a href="https://sinclairlondon.com/pages/prive" class="project-button"><img src={SinclairLondon} alt="SinclairLondonHomepage"class="project-img"></img></a>
                     <hr></hr>
                     <div class="project-details flex">
                         <h3>01</h3>
@@ -27,7 +23,7 @@ function Project(){
                     <hr></hr>
                 </div>
                 <div class="project-item reveal" id="project2">
-                    <a href="https://adammbnitro.github.io/Recipe-API-Instructions" class="project-button"><img src={Recipe} class="project-img"></img></a>
+                    <a href="https://adammbnitro.github.io/Recipe-API-Instructions" class="project-button"><img src={Recipe} alt="RecipeFinderApp" class="project-img"></img></a>
                     <hr></hr>
                     <div class="project-details flex">
                         <h3>02</h3>

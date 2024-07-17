@@ -1,7 +1,5 @@
 import React from "react";
 import headshot from "./images/headshot2.jpg"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faReact, faCss3, faBootstrap, faHtml5, faShopify, faGithub, } from "@fortawesome/free-brands-svg-icons";
 import arrow from "./images/—Pngtree—hand drawn arrow_5991030.png"
 
 function Aboutme(){
@@ -24,19 +22,9 @@ function Aboutme(){
                             developer. Let's create something extraordinary 
                             together!
                         </p>
-                        <img src={arrow} alt="" class="hero-arrrow reveal"/>
+                        <img src={arrow} alt="arrow" class="hero-arrrow reveal"/>
                     </div>
-                    <img src={headshot} class="about-img reveal"></img>
-                    {/* <div id="banner">
-                        <div className="about-icons scroll"> 
-                            <FontAwesomeIcon class="about-icon spin" icon={faReact}></FontAwesomeIcon>
-                            <FontAwesomeIcon class="about-icon  bounce2" icon={faCss3}></FontAwesomeIcon>
-                            <FontAwesomeIcon class="about-icon  hithere" icon={faBootstrap}></FontAwesomeIcon>
-                            <FontAwesomeIcon class="about-icon  flip" icon={faHtml5}></FontAwesomeIcon>
-                            <FontAwesomeIcon class="about-icon" icon={faShopify}></FontAwesomeIcon>
-                            <FontAwesomeIcon class="about-icon" icon={faGithub}></FontAwesomeIcon>
-                        </div>
-                    </div> */}
+                    <img src={headshot} alt="Headshot" class="about-img reveal"></img>
                     
                 </div>
             </section>
