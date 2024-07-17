@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub , faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 function Social(){
-    const [isHeroRightVisible, setIsHeroRightVisible] = useState(true);
+  const [isHeroRightVisible, setIsHeroRightVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,11 +23,12 @@ function Social(){
 
     window.addEventListener('scroll', handleScroll);
     
-    // Clean up the event listener on component unmount
+    // Clean up the event
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
     }, []);
+    
     return (
         <div>
           {isHeroRightVisible && (

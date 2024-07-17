@@ -85,7 +85,7 @@ select {
   --textcol: whitesmoke;
   --bgcol: #2C3639;
   --sectioncol: #232931;
-  --sparecol: #DCD7C9;
+  --sparecol: rgb(205, 205, 205);
   --font1: "Red Hat Text", sans-serif;
 } 
 
@@ -93,8 +93,14 @@ h1, h2, h3, p{
   text-wrap: balance;
 }
 
-h1, h2, h3, p, small, li{
+h1, h2, h3, h4, h5, p, small, li{
   font-family: var(--font1);
+}
+
+@media only screen and (max-width: 1024px) {
+  p{
+    font-size: 18px;
+  }
 }
 
 .flex{
@@ -204,7 +210,6 @@ nav{
   font-weight: 1000;
 }
 
-
 a.nav-item:hover{
   margin-left: 2em;
 }
@@ -236,7 +241,8 @@ transform: translate3d(0, 0.2em, 0);
 /********************Nav responsive*****************/
 @media (max-width:450px){
   nav{
-    width: 3em;
+    width: 2em;
+    height: 1em;
   }
 }
 /******************hero side***************/
@@ -263,7 +269,7 @@ transform: translate3d(0, 0.2em, 0);
   align-items: center;
   justify-content: center;
   mix-blend-mode: difference;
-  background-color: orangered;
+  background-color: rgb(255, 69, 0);
   writing-mode: vertical-rl;
   animation: fade-left 0.8s;
   transition: opacity 0.3s ease-in-out;
@@ -283,22 +289,28 @@ transform: translate3d(0, 0.2em, 0);
 }
 
 /*Hero*/
+
 header{
   position:static;
-  background-image: url("/public/images/test2.JPG");
+  background-image:url("/public/images/abstract-gradient-background-with-grainy-effect2.jpg");
   background-size: cover;
-  background-position: top center;
-  /* background-size: 1215px; */
+  background-position:  top center;
 }
+@media only screen and (max-width: 1024px) {
+  header{
+    background-position: bottom left;
+  }
+}
+
 .container-hero{
   padding-left: 3em;
   height: 100vh;
   width: 100%;
-  padding: 4em;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-end;
   overflow: hidden;
+  
 }
 @keyframes fade-right {
   0%{
@@ -316,32 +328,18 @@ header{
   width: 100%;
   height: auto;
   text-align: left;
-  grid-template-columns: auto;
-  grid-gap: 10px;
   animation: fade-right 1s;
+  line-height: 0.9;
 }
 .hero-h1{
-  padding-bottom: 0.3em;
-  font-size: 3.7em;
+  font-size: 12em;
   font-weight:lighter;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: rgb(255, 68, 0, 0.8);
 }
 
-.hero-p{
-  margin-top: -1em;
-  font-size: 16px;
-  font-family: "Red Hat Text", sans-serif;
-  color: white;
-  z-index: 1;
-  padding: 5px;
-  width: 75%;
-}
-.hero-p-small{
-  font-size: 0;
-}
 .button-hero{
-  height: 8vh;
+  height: 10vh;
   width: 50%;
   border-radius: 40px;
   font-family: "Red Hat Text", sans-serif;
@@ -350,8 +348,7 @@ header{
   border-color: transparent;
   color: #232931;
   background-color: whitesmoke;
-  margin-top: 1em;
-  transition: 0.5s;
+  transition: 0.3s;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -359,15 +356,15 @@ header{
   text-decoration: none;
 }
 .button-hero:hover{
-  border-color: whitesmoke;
+  border-color: white;
   color: white;
   background-color: transparent;
 }
+
 .h-right{
   width: 100%;
   height: auto;
   text-align: right;
-
 }
 
 .my-name{
@@ -396,10 +393,6 @@ header{
 }
 /*************tablet***********/
 @media (max-width: 768px) {
-  .hero-h1{
-    font-size: 4em;
-    margin-top: -1em;
-  }
   .container-hero{
     align-items: flex-start;
     justify-content: flex-end;
@@ -410,41 +403,19 @@ header{
     width: 100%;
   }
   .hero-h1{
-    font-size: 2.5em;
-    text-align: center;
-  }
-  .hero-p{
-    width: 100%;
-    text-align: center;
+    font-size: 9em;
   }
   .button-hero{
     width: 100%;
   }
-  
 }
 /*********phone***********/
 @media (max-width: 500px) {
-  .hero-h1{
-    font-size: 3em;
-  }
-
   .profile{
-    height: 50%;
+    padding-left:1em;
   }
-  
-  .hero-p{
-    font-size: 0px;
-  }
-  .hero-p-small{
-    font-size: 18px;
-    margin-top: -1em;
-    font-family: "Red Hat Text", sans-serif;
-    color: white;
-    z-index: 1;
-    padding: 0px;
-    width: 100%;
-    text-align: center;
-    font-size: 20px;
+  .hero-h1{
+    font-size: 7em;
   }
 }
 
@@ -462,31 +433,29 @@ header{
   .hero-h1{
     font-size: 4em;
   }
-  .profile{
-    width: 50%;
-  }
 }
 @media (max-width:400px){
   .hero-right{
     height: 50%;
   }
 }
+
 /*Section*/
 .section{
-  padding:5em;
+  padding:3em;
   background-color: var(--sectioncol);
-  padding-left: 12em;
-  padding-right: 5em;
+  padding-left: 6em;
+  padding-right: 3em;
+  padding-top: 6em;
   width: 100%;
-  justify-content: center;
-  align-items: center;
 }
+
 
 .section2{
   padding:3em;
   background-color: var(--sparecol);
   padding-left: 6em;
-  padding-right: 6em;
+  padding-right: 3em;
   width: 100%;
   height: auto;
   align-items: center;
@@ -499,34 +468,36 @@ header{
 }
 
 .section-title{
-  font-size: 2em;
+  font-size: 4em;
   text-align:left;
   font-family: "Red Hat Text", sans-serif;
   color: #dc1c31;
   border-color: #ff4500;
 }
 .section-title2{
-  font-size: 2em;
+  font-size: 4em;
   text-align:left;
   font-family: "Red Hat Text", sans-serif;
   color: rgba(0, 128, 255, 0.639);
   border-color: #ff4500;
 }
 .section-sub{
-  font-size: 1em;
+  font-size: 1.5em;
   text-align: center;
   font-family: "Red Hat Text", sans-serif;
   text-align: left;
   color: rgb(245, 245, 245, 0.8);
   font-style: italic;
+  margin-bottom:-0.7em;
 }
 .section-sub2{
-  font-size: 1em;
+  font-size: 1.5em;
   text-align: center;
   font-family: "Red Hat Text", sans-serif;
   text-align: left;
   color: rgb(0, 0, 0,0.8);
   font-style: italic;
+  margin-bottom:-0.7em;
 }
 .section-p{
   font-family: "Red Hat Text", sans-serif;
@@ -538,23 +509,59 @@ header{
   margin-top: 1em;
   color: #232931;
 }
+
 /*ABOUT SECTION*/
 .about-section{
   justify-content: space-between;
   overflow: hidden;
-  padding-left: 2.5em;
   padding-top: 4em;
 }
+
+.hero-arrrow{
+  height: 20em;
+  position: absolute;
+  right: 40%;
+}
+@media only screen and (max-width: 600px) {
+  .hero-arrrow{
+    height: 15em;
+    position: absolute;
+    right: 56%;
+    rotate: 30deg;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px){
+  .hero-arrrow{
+    height: 22em;
+    position: absolute;
+    right: 55%;
+    rotate: 20deg;
+  }
+}
+
+.about-img{
+  width: 45%;
+  height: 100%;
+  z-index: -1;
+}
+@media only screen and (max-width: 600px) {
+  .about-img{
+    width: 100%;
+  }
+}
+@media only screen  and (max-width: 1024px){
+  .about-img{
+    padding-top: 2em;
+    width: 100%;
+  }
+}
+
 .about-icons{
   padding: 2em;
   margin-left: 3em;
   margin: 2em;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows:  auto;
-  grid-template-areas: 
-  "react html"
-  "bootstrap css";
   width: 50%;
   column-gap: 40px;
   row-gap: 40px;
@@ -562,6 +569,52 @@ header{
   border-radius: 1px;
   text-align: center;
 }
+
+/*****************NEW*****************/
+/* #banner {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #fff;
+}
+#banner .scroll {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: auto;
+  white-space: nowrap;
+  animation: loop 40s linear infinite;
+}
+.fade {
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(
+      90deg,
+      #000,
+      transparent 30%,
+      transparent 90%,
+      #000
+  );
+  inset: 0;
+
+}
+@keyframes loop {
+  0% {transform: translateX(100%);}
+  100% {transform: translateX(-100%);}
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.7rem 1rem;
+  margin: 0rem 1rem;
+  white-space: nowrap;
+} */
+
+/*****************NEW*****************/
+
 .about-text{
   margin-top: em;
   width: 50%;
@@ -572,18 +625,7 @@ header{
   color: rgb(0, 128, 255, 0.5);
   justify-self: center;
 }
-.react{
-  grid-area: react;
-}
-.css{
-  grid-area: css;
-}
-.html{
-  grid-area: html;
-}
-.bootstrap{
-  grid-area: bootstrap;
-}
+
 .spin {
   animation: spin 9s infinite linear;
 }
@@ -630,8 +672,8 @@ header{
 /*******SMALLSCREEN* computer************/
 @media (max-width: 1024px){
   .section{
-    padding-left: 8em;
-    padding-right: 2em;
+    padding-left: 4em;
+    padding-right: 3em;
   }
   .section2{
     padding-left: 4em;
@@ -656,7 +698,7 @@ header{
   .section2{
     padding:1em;
     padding-left: 3em;
-    padding-right: 4em;
+    /* padding-right: 4em; */
   }
   .about-text{
     width: auto;
@@ -686,10 +728,7 @@ header{
   }
   .section2{
     padding-left: 2em;
-    padding-right: 3.5em;
-  }
-  .project-section{
-    flex-direction: column;
+    padding-right: .5em;
   }
   .project-text{
     width: 100%;
@@ -700,7 +739,6 @@ header{
 .timeline{
   position:relative;
   width:100%;
-  padding-bottom: 4em;
 }
 .timeline-container{
   padding: 10px 50px;
@@ -723,14 +761,14 @@ header{
 }
 .timeline-container img{
   position: absolute;
-  width: 40px;
+  width: 60px;
   border-radius: 50%;
-  right: -19px;
+  right: -28px;
   top: 32px;
   z-index: 1;
 }
 .right-container img{
-  left: -20px;
+  left: -28px;
   z-index: 1;
 }
 .timeline::after{
@@ -738,7 +776,7 @@ header{
   position: absolute;
   width: 3px;
   height: 80%;
-  background:rgb(245, 245, 245, 0.8);
+  background:rgb(245, 245, 245, 0.4);
   top:0;
   left: 50%;
   margin-left: -3px;
@@ -808,202 +846,147 @@ header{
   }
 }
 /*Project*/
-.project-section{
-  height: auto;
-  width: 100%;
-  margin-top:4em;
-  margin-bottom: 4em;
-  margin-left: -5em;
-  background-color:  rgb(0, 0, 0, 0.5);
-}
-.project-text{
-  flex-direction: column;
-  text-align: center;
-  width: 100%;
-  height: 120%;
-  padding: 2em;
-  height:fit-content;
-}
+
 .project-container{
-  align-items: center;
-  width: auto;
-  height: auto;
-  padding: 25px 1px;
-  margin: 1em;
-  list-style: none;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-}
-.project-item{
-  display: flex;
-  flex-direction: column;
-  flex: 0 0 50%;
-  padding: 1em;
-  border-radius: 12px;
-  height: 400px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0,);
-}
-.project-img{
-  max-height: 150px;
-  width: 100%;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
 }
 
-.project-container::-webkit-scrollbar {
-  height: 4px;
-}
+#project-title { grid-area: 1 / 1 / 2 / 4; }
+#project1 { grid-area: 2 / 1 / 6 / 4; }
+#project2 { grid-area: 1 / 4 / 6 / 6; }
 
-.project-container::-webkit-scrollbar-thumb,
-.project-container::-webkit-scrollbar-track {
-  border-radius: 5px;
-}
-
-.project-container::-webkit-scrollbar-thumb {
-  background: rgb(245, 245, 245, 0.5);
-}
-
-.project-container::-webkit-scrollbar-track {
-  background: rgb(0, 0, 0, 0.3);
-}
-
-.project-details{
-  background-color: rgb(220, 28, 49, 0.8);
-  height: 100%;
-  padding: 0.5em;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  width: auto;
-  text-align: center;
-}
-.card-title{
-  font-family: "Red Hat Text", sans-serif;
-  color: whitesmoke;
-}
-.card-p{
-  font-family: "Red Hat Text", sans-serif;
-  font-size: 12px;
-  color:whitesmoke;
-}
-.project-item-bottom{
-  margin-top: 1em;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.project-button{
-  position: relative;
-  font-family: "Red Hat Text", sans-serif;
-  height: 2em;
-  width: 100%;
-  border-radius: 2px;
-  color: whitesmoke;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-.project-git{
-  height: 2em;
-  color: rgb(35, 41, 49, 0.8);
-}
-/*******SMALLSCREEN*************/
-@media (max-width: 1024px){
-}
-/***********TABLET*******************/
-@media (max-width: 800px) {
-  .project-text{
-    width: 100%;
-  }
-  .project-section{
-    flex-direction: column;
-
-  }
-  .project-button{
-    width: 100%;
-  }
-}
-@media (max-width: 600px) {
-  .project-container::-webkit-scrollbar {
-    height: 3px;
-  }
-}
-@media (max-width: 500px){
-  .card-title{
-    font-size: 0px;
-  }
-  .card-p{
-    font-size: 14px;
-  }
-  .project-container{
-    overflow-y: hidden;
-    background-color: rgb(35, 41, 49, 0.8);
-  }
-  .project-section{
-    margin-top:0em;
-    margin-bottom: 0em;
-    margin-right: 0em;;
-    padding: 0.25em;
-    background-color: transparent;
-  }
-  .project-item{
-    width: 500px;
-    flex: 0 0 90%;
-  }
-  
-}
-@media (max-width: 400px){
-  .project-item{
-    width: 400px;
-  }
-}
-/*******************Footer*************************/
-
-.footer{
-  padding: 3em;
-  background-color: var(--sparecol);
-  justify-content: space-evenly;
-  width: auto;
-}
-.footer li{
-  list-style: none;
-}
-.footer p{
-padding: 1em;
-}
-.footer h3{
-  font-weight: 50;
-}
-
-@media (max-width: 800px) {
-  .footer{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  .footer ul{
-    text-align:  center;
-    margin-right: 2em;
-  }
-}
-
-@media (max-width: 700px){
-  h1, h2, p{
-    text-align: center;
-  }
-  .section-sub{
-    text-align: center;
+@media only screen and (max-width: 1024px){
+  .section{
+    padding-top: 4em;
+    display: flex;
+    padding-left: 4em;
+    padding-right: 1em;
+    padding-bottom: 4em;
+    
   }
   .section-title{
-    text-align: center;
+    font-size: 4em;
   }
-  .section-title2{
-    text-align: center;
-  }
-  .section-sub2{
-    text-align: center;
+  .project-container{
+    padding: none;
+    display: flex;
+    flex-direction: column;
   }
 }
+
+.section p, h4{
+  color: white;
+}
+
+.section h3{
+  color: white;
+  font-size: 45px;
+  margin-right: 10px;
+}
+
+.project-info{
+  padding-top: 7px;
+}
+
+#project2 img{
+  height: 85%;
+}
+
+/*Footer*/
+
+footer{
+  background-image: url("/public/images/abstract-gradient-background-with-grainy-effect2.jpg");
+  height: auto;
+  width: 100%;
+  color: white;
+  padding-left: 4em;
+  background-size: cover;
+  background-position: top center;
+  line-height: 1;
+  padding-top:10em;
+  padding-bottom:2em;
+  overflow:hidden;
+}
+@media only screen and (max-width: 1024px) {
+  footer{
+    padding-left: 1em;
+  }
+}
+
+footer ul{
+  list-style: none;
+  width: 60%;
+}
+
+footer h3{
+  font-size: 8em;
+  width: 40%;
+}
+
+footer hr{
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  footer ul{
+    width: 100%;
+  }
+  
+  footer h3{
+    font-size: 4em;
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  footer ul{
+    width: 100%;
+  }
+  
+  footer h3{
+    font-size: 6em;
+    width: 40%;
+  }
+}
+
+.arrow-container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 40%;
+  padding-right: 1em;
+}
+
+.arrow-up{
+  height: 10em;
+  color: white;
+}
+@media only screen and (max-width: 600px) {
+  .arrow-up{
+    height: 4em;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px){
+  .arrow-up{
+    height: 8em;
+  }
+}
+
+.arrow-up:hover{
+  color: blue;
+}
+
+.bounce {
+  animation: bounce2 4s ease infinite;
+}
+@keyframes bounce {
+    0%, 8%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    5% {transform: translateY(-18px);}
+    11% {transform: translateY(-10px);}
+}
+
