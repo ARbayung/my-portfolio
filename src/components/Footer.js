@@ -4,7 +4,7 @@ import { faLongArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 function Footer(){
     return <footer id="Footer" class="footer flex">
-            <ul class="reveal">
+            <ul>
                 <h3>LETS WORK TOGETHER</h3>
                 <hr></hr>
                 <p>Designed and Developed by Abiskar Rai</p>

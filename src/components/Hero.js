@@ -1,8 +1,7 @@
 import React from "react";
 
 function Hero(){
-    
-    return <header id="Home" class="container-hero flex">
+        return <header id="Home" class="container-hero flex">
         <div class="profile">
             <h1 class="hero-h1">RAI</h1>
             <h1 class="hero-h1">ABISKAR</h1>
@@ -14,6 +13,7 @@ function Hero(){
             <p class="my-name">ABISKAR RAI</p>
         </div>
     </header>
+    
 }
 
 export default Hero;

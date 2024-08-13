@@ -142,9 +142,9 @@ h1, h2, h3, h4, h5, p, small, li{
 /****scroll animation**********/
 .reveal{
   position: relative;
-  transform: translateY(150px);
+  transform: translateY(40px);
   opacity: 0;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 .reveal.active{
   transform: translateY(0px);
@@ -241,7 +241,7 @@ transform: translate3d(0, 0.2em, 0);
 /********************Nav responsive*****************/
 @media (max-width:450px){
   nav{
-    width: 2em;
+    width: 4em;
     height: 1em;
   }
 }
@@ -312,6 +312,11 @@ header{
   overflow: hidden;
   
 }
+@media only screen and (max-width: 600px) {
+  .container-hero{
+    padding-left:2em;
+  }
+}
 @keyframes fade-right {
   0%{
     opacity: 0;
@@ -335,8 +340,10 @@ header{
   font-size: 12em;
   font-weight:lighter;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
   color: rgb(255, 68, 0, 0.8);
 }
+
 
 .button-hero{
   height: 10vh;
@@ -344,8 +351,8 @@ header{
   border-radius: 40px;
   font-family: "Red Hat Text", sans-serif;
   font-size: 1.2em;
-  border-width: 1px;
-  border-color: transparent;
+  border: 2px solid;
+  border-color: white;
   color: #232931;
   background-color: whitesmoke;
   transition: 0.3s;
@@ -357,7 +364,7 @@ header{
 }
 .button-hero:hover{
   border-color: white;
-  color: white;
+  color:white;
   background-color: transparent;
 }
 
@@ -410,33 +417,9 @@ header{
   }
 }
 /*********phone***********/
-@media (max-width: 500px) {
-  .profile{
-    padding-left:1em;
-  }
+@media only screen and (max-width: 600px) {
   .hero-h1{
-    font-size: 7em;
-  }
-}
-
-@media (max-width:380px){
-  .h-right{
-    height: 7%;
-  }
-  .profile{
-    grid-gap: 1px;
-    padding: 0em;
-  }
-}
-
-@media (max-height:500px){
-  .hero-h1{
-    font-size: 4em;
-  }
-}
-@media (max-width:400px){
-  .hero-right{
-    height: 50%;
+    font-size: 5em;
   }
 }
 
@@ -480,6 +463,14 @@ header{
   font-family: "Red Hat Text", sans-serif;
   color: rgba(0, 128, 255, 0.639);
   border-color: #ff4500;
+}
+@media only screen and (max-width: 600px) {
+  .section-title2{
+    font-size: 3em;
+  }
+  .section-title{
+    font-size: 3em;
+  }
 }
 .section-sub{
   font-size: 1.5em;
@@ -679,9 +670,6 @@ header{
     padding-left: 4em;
     padding-right: 3em;
   }
-  .section-title{
-    font-size: 2em ;
-  }
 }
 
 /*******TABLETMODE**************/
@@ -703,9 +691,6 @@ header{
   .about-text{
     width: auto;
     padding-right: 0.7em;
-  }
-  .section-title{
-    font-size: 2em;
   }
   .about-icons{
     padding: 0.5em;
@@ -851,7 +836,7 @@ header{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 1em;
+  grid-column-gap: 4em;
   grid-row-gap: 1em;
 }
 
@@ -867,9 +852,6 @@ header{
     padding-right: 1em;
     padding-bottom: 4em;
     
-  }
-  .section-title{
-    font-size: 4em;
   }
   .project-container{
     padding: none;
@@ -891,10 +873,17 @@ header{
 .project-info{
   padding-top: 7px;
 }
-
-#project2 img{
-  height: 85%;
+@media only screen and (max-width: 600px) {
+  .project-info p{
+    font-size: 1em;
+  }
 }
+
+.project-button :hover{
+  background-color: #000;
+  opacity: 0.5;
+}
+
 
 /*Footer*/
 
@@ -902,7 +891,7 @@ footer{
   background-image: url("/public/images/abstract-gradient-background-with-grainy-effect2.jpg");
   height: auto;
   width: 100%;
-  color: white;
+  color: whitesmoke;
   padding-left: 4em;
   background-size: cover;
   background-position: top center;
@@ -937,7 +926,7 @@ footer hr{
   }
   
   footer h3{
-    font-size: 4em;
+    font-size: 3em;
     width: 40%;
   }
 }
@@ -964,6 +953,7 @@ footer hr{
 
 .arrow-up{
   height: 10em;
+  margin-bottom: 1.5em;
   color: white;
 }
 @media only screen and (max-width: 600px) {
@@ -978,7 +968,7 @@ footer hr{
 }
 
 .arrow-up:hover{
-  color: blue;
+  color: rgb(255, 69, 0);
 }
 
 .bounce {
@@ -989,4 +979,3 @@ footer hr{
     5% {transform: translateY(-18px);}
     11% {transform: translateY(-10px);}
 }
-

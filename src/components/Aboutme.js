@@ -1,9 +1,12 @@
 import React from "react";
-import headshot from "./images/headshot2.jpg"
-import arrow from "./images/—Pngtree—hand drawn arrow_5991030.png"
+import headshot from "./images/headshot2.jpg";
+import arrow from "./images/—Pngtree—hand drawn arrow_5991030.png";
 
-function Aboutme(){
-    return <section id="About" class="section2 flex">
+
+const Aboutme = () =>{
+    // const {ref} = useParallax({ speed:10 });
+
+    return<section id="About" class="section2 flex">
                 <div class="about-section flex reveal">
                     <div class="about-text">
                     <h2 class="section-sub2">MY SKILLS</h2>
@@ -22,10 +25,9 @@ function Aboutme(){
                             developer. Let's create something extraordinary 
                             together!
                         </p>
-                        <img src={arrow} alt="arrow" class="hero-arrrow reveal"/>
+                        <img src={arrow} alt="arrow" class="hero-arrrow"/>
                     </div>
                     <img src={headshot} alt="Headshot" class="about-img reveal"></img>
-                    
                 </div>
             </section>
 }

@@ -11,6 +11,7 @@ import Social from './components/Social';
 import Timeline from './components/Timeline';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 window.addEventListener("scroll", reveal);
 function reveal(){
   var reveals = document.querySelectorAll(".reveal");
@@ -28,14 +29,15 @@ function reveal(){
     }
     }
 }
+
 root.render(
   <React.StrictMode>
     <Navbar/>
     <Social/>
     <Hero/>
+    <Project/>
     <Aboutme/>
     <Timeline/>
-    <Project/>
     <Footer/>
   </React.StrictMode>
 );

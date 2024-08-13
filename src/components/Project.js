@@ -9,7 +9,7 @@ function Project(){
                     <h2 class="section-sub">MY WORK</h2>
                     <h1 class="section-title">PROJECTS.</h1>
                 </div>
-                
+            
                 <div class="project-item reveal" id="project1">
                     <a href="https://sinclairlondon.com/pages/prive" class="project-button"><img src={SinclairLondon} alt="SinclairLondonHomepage"class="project-img"></img></a>
                     <hr></hr>
