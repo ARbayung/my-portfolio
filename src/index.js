@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Aboutme from './components/Aboutme';
-import Footer from "./components/Footer"
+import Footer from "./components/Footer";
 import Project from './components/Project';
 import Social from './components/Social';
 import Timeline from './components/Timeline';
