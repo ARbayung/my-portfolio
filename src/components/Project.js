@@ -1,6 +1,7 @@
 import React from "react";
 import Recipe from "./images/recipe-finder1.png"
 import SinclairLondon from "./images/sinclairlondon.png"
+import {Outlet, Link} from 'react-router-dom';
 
 function Project(){
     return<section id="Project" class="section">
@@ -9,9 +10,12 @@ function Project(){
                     <h2 class="section-sub">MY WORK</h2>
                     <h1 class="section-title">PROJECTS.</h1>
                 </div>
-            
                 <div class="project-item reveal" id="project1">
-                    <a href="https://sinclairlondon.com/pages/prive" class="project-button"><img src={SinclairLondon} alt="SinclairLondonHomepage"class="project-img"></img></a>
+                    <div class="project-button">
+                        <Link to="/SinclairLondon">
+                            <img src={SinclairLondon} alt="SinclairLondonimg"class="project-img"/>
+                        </Link>
+                    </div>
                     <hr></hr>
                     <div class="project-details flex">
                         <h3>01</h3>
@@ -35,7 +39,8 @@ function Project(){
                     <hr></hr>
                 </div>
             </div>
+            <Outlet/>
     </section>
 }
 
-export default Project
+export default Project;
