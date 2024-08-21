@@ -21,8 +21,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -61,9 +61,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -77,49 +77,59 @@ select {
 /*************************************MODIFICATIONS*****************************************/
 
 /*general*/
-@import url('https://fonts.cdnfonts.com/css/noir');
-@import url('https://fonts.cdnfonts.com/css/rezland-2');
+@import url("https://fonts.cdnfonts.com/css/noir");
+@import url("https://fonts.cdnfonts.com/css/rezland-2");
 
-:root{
-  --headcol: #A27B5C;
+:root {
+  --headcol: #a27b5c;
   --textcol: whitesmoke;
-  --bgcol: #2C3639;
+  --bgcol: #2c3639;
   --sectioncol: #232931;
   --sparecol: rgb(205, 205, 205);
   --font1: "Red Hat Text", sans-serif;
-} 
+}
 
-h1, h2, h3, p{
+h1,
+h2,
+h3,
+p {
   text-wrap: balance;
 }
 
-h1, h2, h3, h4, h5, p, small, li{
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+small,
+li {
   font-family: var(--font1);
 }
 
 @media only screen and (max-width: 1024px) {
-  p{
+  p {
     font-size: 18px;
   }
 }
 
-.flex{
+.flex {
   display: flex;
 }
 
-.grid{
+.grid {
   display: grid;
 }
 
-.col{
+.col {
   flex-direction: column;
 }
 
-.right{
+.right {
   float: right;
 }
 
-.title{
+.title {
   color: var(--headcol);
   font-size: larger;
 }
@@ -130,41 +140,42 @@ h1, h2, h3, h4, h5, p, small, li{
   align-items: center;
 }
 
-.mt{
+.mt {
   margin-top: 1em;
 }
-.section-hr{
+.section-hr {
   height: 5px;
   background-color: blue;
   width: 70%;
   border-radius: 95px;
 }
 /****scroll animation**********/
-.reveal{
+.reveal {
   position: relative;
   transform: translateY(40px);
   opacity: 0;
   transition: all 0.5s ease;
 }
-.reveal.active{
+.reveal.active {
   transform: translateY(0px);
   opacity: 1;
 }
-html, body{
+html,
+body {
   scroll-behavior: smooth;
 }
 /*****************navbar*******************8*/
 @keyframes fade-right {
-  0%{
+  0% {
     opacity: 0;
     transform: translateX(-30px) scale(0.9);
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateX(0px) scale(1);
   }
 }
-nav{
+nav {
   height: 100%;
   padding: 1em;
   writing-mode: vertical-lr;
@@ -177,14 +188,14 @@ nav{
   animation: fade-right 0.8s;
   display: flex;
 }
-.logo{
-  font-family: 'Rezland', sans-serif;
+.logo {
+  font-family: "Rezland", sans-serif;
   padding-top: 5px;
   font-size: 3em;
-  color: rgb(245, 245, 245, 0.8) ;
-  cursor:default;
+  color: rgb(245, 245, 245, 0.8);
+  cursor: default;
 }
-.navbar{
+.navbar {
   height: 90vh;
   width: 5em;
   list-style-type: none;
@@ -192,10 +203,10 @@ nav{
   align-items: center;
 }
 
-.nav-item{
+.nav-item {
   font-family: "Red Hat Text", sans-serif;
   margin: 0.5em;
-  font-size: .9em;
+  font-size: 0.9em;
   width: 5em;
   height: 100%;
   display: block;
@@ -210,7 +221,7 @@ nav{
   font-weight: 1000;
 }
 
-a.nav-item:hover{
+a.nav-item:hover {
   margin-left: 2em;
 }
 a.nav-item::after {
@@ -222,15 +233,17 @@ a.nav-item::after {
   height: 0.1em;
   background-color: #ff4500;
   opacity: 1;
-  transition: opacity 300ms, 200ms;
+  transition:
+    opacity 300ms,
+    200ms;
 }
 a.nav-item:hover::after,
 a:focus::after {
-opacity: 1;
-width: 150%;
-transform: translate3d(0, 0.2em, 0);
+  opacity: 1;
+  width: 150%;
+  transform: translate3d(0, 0.2em, 0);
 }
-.hr-nav{
+.hr-nav {
   width: 80%;
   margin-top: 1em;
   height: 5px;
@@ -239,29 +252,29 @@ transform: translate3d(0, 0.2em, 0);
 }
 
 /********************Nav responsive*****************/
-@media (max-width:450px){
-  nav{
+@media (max-width: 450px) {
+  nav {
     width: 4em;
     height: 1em;
   }
 }
 /******************hero side***************/
-.name-absolute{
+.name-absolute {
   position: absolute;
   top: 1em;
   right: 4em;
 }
 @keyframes fade-left {
-  0%{
+  0% {
     opacity: 0;
     transform: translateX(30px) scale(0.9);
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateX(0px) scale(1);
   }
 }
-.hero-right{
+.hero-right {
   position: fixed;
   right: 0;
   width: 3em;
@@ -274,35 +287,34 @@ transform: translate3d(0, 0.2em, 0);
   transition: opacity 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
-.hero-right-disappear{
+.hero-right-disappear {
   right: -50px;
   animation: fade-left 0.8s;
   transition: 0.3s ease-in-out;
 }
-.hero-slogan{
+.hero-slogan {
   font-family: "Red Hat Text", sans-serif;
   color: var(--sparecol);
   font-weight: bold;
   font-style: italic;
-  
 }
 
 /*Hero*/
 
-header{
-  position:static;
+header {
+  position: static;
   /* background-image:url("https://www.shadergradient.co/customize"); */
 
   background-size: cover;
-  background-position:  top center;
+  background-position: top center;
 }
 @media only screen and (max-width: 1024px) {
-  header{
+  header {
     background-position: bottom left;
   }
 }
 
-.container-hero{
+.container-hero {
   padding-left: 3em;
   height: 100vh;
   width: 100%;
@@ -310,24 +322,23 @@ header{
   justify-content: space-evenly;
   align-items: flex-end;
   overflow: hidden;
-  
 }
 @media only screen and (max-width: 600px) {
-  .container-hero{
-    padding-left:2em;
+  .container-hero {
+    padding-left: 2em;
   }
 }
 @keyframes fade-right {
-  0%{
+  0% {
     opacity: 0;
     transform: translateX(-30px) scale(0.9);
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateX(0px) scale(1);
   }
 }
-.profile{
+.profile {
   padding: 2em;
   margin-right: 4em;
   width: 100%;
@@ -336,41 +347,39 @@ header{
   animation: fade-right 1s;
   line-height: 0.9;
 }
-.hero-h1{
+.hero-h1 {
   font-size: 10em;
-  font-weight:lighter;
+  font-weight: lighter;
   /* font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
 
   /* color: rgb(255, 68, 0, 0.8); */
   color: white;
 }
 
-.hero-h2{
+.hero-h2 {
   font-size: 4em;
-  font-weight:lighter;
+  font-weight: lighter;
   color: white;
   text-align: right;
 }
 
-.hero-sub{
+.hero-sub {
   width: 100%;
   display: flex;
-  align-items:center;
-  justify-content:space-between;
-
+  align-items: center;
+  justify-content: space-between;
 }
 @media only screen and (max-width: 600px) {
-  .hero-sub{
+  .hero-sub {
     flex-direction: column-reverse;
   }
-  .hero-h2{
+  .hero-h2 {
     text-align: left;
     font-size: 2.5em;
   }
-  
 }
 
-.button-hero{
+.button-hero {
   height: 12vh;
   width: 90%;
   border-radius: 40px;
@@ -387,19 +396,19 @@ header{
   text-align: center;
   text-decoration: none;
 }
-.button-hero:hover{
+.button-hero:hover {
   border-color: white;
-  color:white;
+  color: white;
   background-color: transparent;
 }
 
-.h-right{
+.h-right {
   width: 100%;
   height: auto;
   text-align: right;
 }
 
-.my-name{
+.my-name {
   position: fixed;
   top: 1em;
   right: 3em;
@@ -409,49 +418,48 @@ header{
   font-style: italic;
   background-color: rgb(255, 68, 0, 0.8);
   padding-left: 10px;
-  padding-right: 10px ;
+  padding-right: 10px;
   width: 10em;
   mix-blend-mode: difference;
 }
 
-.nav-icon{
+.nav-icon {
   width: 1.5em;
   margin: 1em;
   color: whitesmoke;
   transition: 0.3s;
 }
-.nav-icon:hover{
+.nav-icon:hover {
   color: #4a9ced;
 }
 /*************tablet***********/
 @media (max-width: 768px) {
-  .container-hero{
+  .container-hero {
     align-items: flex-start;
     justify-content: flex-end;
     flex-direction: column;
   }
-  .profile{
+  .profile {
     padding-top: 2em;
     width: 100%;
   }
-  .hero-h1{
+  .hero-h1 {
     font-size: 9em;
   }
-  .button-hero{
+  .button-hero {
     width: 100%;
   }
 }
 /*********phone***********/
 @media only screen and (max-width: 600px) {
-  .hero-h1{
+  .hero-h1 {
     font-size: 4em;
   }
-  
 }
 
 /*Section*/
-.section{
-  padding:3em;
+.section {
+  padding: 3em;
   background-color: var(--sectioncol);
   padding-left: 6em;
   padding-right: 3em;
@@ -459,9 +467,8 @@ header{
   width: 100%;
 }
 
-
-.section2{
-  padding:3em;
+.section2 {
+  padding: 3em;
   background-color: var(--sparecol);
   padding-left: 6em;
   padding-right: 3em;
@@ -471,84 +478,84 @@ header{
   justify-content: center;
 }
 
-.section-container{
+.section-container {
   padding: 2em;
   font-weight: 20px;
 }
 
-.section-title{
+.section-title {
   font-size: 4em;
-  text-align:left;
+  text-align: left;
   font-family: "Red Hat Text", sans-serif;
   color: #dc1c31;
   border-color: #ff4500;
 }
-.section-title2{
+.section-title2 {
   font-size: 4em;
-  text-align:left;
+  text-align: left;
   font-family: "Red Hat Text", sans-serif;
   color: rgba(0, 128, 255, 0.639);
   border-color: #ff4500;
 }
 @media only screen and (max-width: 600px) {
-  .section-title2{
+  .section-title2 {
     font-size: 3em;
   }
-  .section-title{
+  .section-title {
     font-size: 3em;
   }
 }
-.section-sub{
+.section-sub {
   font-size: 1.5em;
   text-align: center;
   font-family: "Red Hat Text", sans-serif;
   text-align: left;
   color: rgb(245, 245, 245, 0.8);
   font-style: italic;
-  margin-bottom:-0.7em;
+  margin-bottom: -0.7em;
 }
-.section-sub2{
+.section-sub2 {
   font-size: 1.5em;
   text-align: center;
   font-family: "Red Hat Text", sans-serif;
   text-align: left;
-  color: rgb(0, 0, 0,0.8);
+  color: rgb(0, 0, 0, 0.8);
   font-style: italic;
-  margin-bottom:-0.7em;
+  margin-bottom: -0.7em;
 }
-.section-p{
+.section-p {
   font-family: "Red Hat Text", sans-serif;
   margin-top: 1em;
-  color: #DCD7C9;
+  color: #dcd7c9;
 }
-.section-p2{
+.section-p2 {
   font-family: "Red Hat Text", sans-serif;
   margin-top: 1em;
   color: #232931;
 }
 
 /*ABOUT SECTION*/
-.about-section{
+.about-section {
   justify-content: space-between;
   overflow: hidden;
   padding-top: 4em;
 }
 
-.hero-arrrow{
+.hero-arrrow {
   height: 20em;
   position: absolute;
   right: 40%;
 }
 @media only screen and (max-width: 600px) {
-  .hero-arrrow{
+  .hero-arrrow {
     height: 15em;
     position: absolute;
     right: 56%;
     rotate: 30deg;
   }
 }
-@media only screen and (min-width: 601px) and (max-width: 1024px){
-  .hero-arrrow{
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .hero-arrrow {
     height: 22em;
     position: absolute;
     right: 55%;
@@ -556,24 +563,24 @@ header{
   }
 }
 
-.about-img{
+.about-img {
   width: 45%;
   height: 100%;
   z-index: -1;
 }
 @media only screen and (max-width: 600px) {
-  .about-img{
+  .about-img {
     width: 100%;
   }
 }
-@media only screen  and (max-width: 1024px){
-  .about-img{
+@media only screen and (max-width: 1024px) {
+  .about-img {
     padding-top: 2em;
     width: 100%;
   }
 }
 
-.about-icons{
+.about-icons {
   padding: 2em;
   margin-left: 3em;
   margin: 2em;
@@ -582,7 +589,7 @@ header{
   width: 50%;
   column-gap: 40px;
   row-gap: 40px;
-  background-color:rgb(245, 245, 245, 0.5);
+  background-color: rgb(245, 245, 245, 0.5);
   border-radius: 1px;
   text-align: center;
 }
@@ -632,11 +639,11 @@ header{
 
 /*****************NEW*****************/
 
-.about-text{
+.about-text {
   margin-top: em;
   width: 50%;
 }
-.about-icon{
+.about-icon {
   height: 90px;
   padding: 0.5em;
   color: rgb(0, 128, 255, 0.5);
@@ -647,52 +654,73 @@ header{
   animation: spin 9s infinite linear;
 }
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .flip {
-	backface-visibility: visible !important;
-	animation: flip 8s ease infinite;
+  backface-visibility: visible !important;
+  animation: flip 8s ease infinite;
 }
 
 @keyframes flip {
-	0% {
-		transform:rotateY(0deg);
-	}
-  33%{
-    transform:rotateY(360deg);
+  0% {
+    transform: rotateY(0deg);
   }
-  66%{
-    transform:rotateY(0deg);
+  33% {
+    transform: rotateY(360deg);
   }
-  100%{
-    transform:rotateY(360deg);
+  66% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
   }
 }
 .hithere {
   animation: hithere 3s ease infinite;
 }
 @keyframes hithere {
-  40%, 60% { transform: rotate(-20deg); }
-  50% { transform: rotate(20deg); }
-  70% { transform: rotate(0deg); }
+  40%,
+  60% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
 }
 .bounce2 {
   animation: bounce2 3s ease infinite;
 }
 @keyframes bounce2 {
-	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-	40% {transform: translateY(-15px);}
-	60% {transform: translateY(-7.5px);}
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-7.5px);
+  }
 }
 /*******SMALLSCREEN* computer************/
-@media (max-width: 1024px){
-  .section{
+@media (max-width: 1024px) {
+  .section {
     padding-left: 4em;
     padding-right: 3em;
   }
-  .section2{
+  .section2 {
     padding-left: 4em;
     padding-right: 3em;
   }
@@ -700,25 +728,25 @@ header{
 
 /*******TABLETMODE**************/
 @media (max-width: 768px) {
-  .about-section{
-    flex-direction:column;
+  .about-section {
+    flex-direction: column;
     justify-content: center;
   }
-  .section{
-    padding:1em;
+  .section {
+    padding: 1em;
     padding-left: 8em;
     padding-right: 1em;
   }
-  .section2{
-    padding:1em;
+  .section2 {
+    padding: 1em;
     padding-left: 3em;
     /* padding-right: 4em; */
   }
-  .about-text{
+  .about-text {
     width: auto;
     padding-right: 0.7em;
   }
-  .about-icons{
+  .about-icons {
     padding: 0.5em;
     margin-left: 0em;
     margin-right: 1em;
@@ -726,51 +754,51 @@ header{
     row-gap: 30px;
     width: 100%;
   }
-  .about-section{
+  .about-section {
     padding-left: 2em;
   }
 }
 
 /*******MOBILEMODE**************/
 @media (max-width: 500px) {
-  .section{
+  .section {
     padding-left: 6em;
-    padding-right: .5em;
+    padding-right: 0.5em;
   }
-  .section2{
+  .section2 {
     padding-left: 2em;
-    padding-right: .5em;
+    padding-right: 0.5em;
   }
-  .project-text{
+  .project-text {
     width: 100%;
   }
 }
 
 /*************TIME LINE***************/
-.timeline{
-  position:relative;
-  width:100%;
+.timeline {
+  position: relative;
+  width: 100%;
 }
-.timeline-container{
+.timeline-container {
   padding: 10px 50px;
   position: relative;
   width: 50%;
   margin-bottom: 2em;
 }
-.timeline-textbox{
+.timeline-textbox {
   padding: 10px 20px;
-  background-color:  rgb(245, 245, 245, 0.4);
+  background-color: rgb(245, 245, 245, 0.4);
   position: relative;
   border-radius: 6px;
   font-size: 15px;
 }
-.left-container{
+.left-container {
   left: 0;
 }
-.right-container{
+.right-container {
   left: 50%;
 }
-.timeline-container img{
+.timeline-container img {
   position: absolute;
   width: 60px;
   border-radius: 50%;
@@ -778,32 +806,32 @@ header{
   top: 32px;
   z-index: 1;
 }
-.right-container img{
+.right-container img {
   left: -28px;
   z-index: 1;
 }
-.timeline::after{
+.timeline::after {
   content: "";
   position: absolute;
   width: 3px;
   height: 80%;
-  background:rgb(245, 245, 245, 0.4);
-  top:0;
+  background: rgb(245, 245, 245, 0.4);
+  top: 0;
   left: 50%;
   margin-left: -3px;
   z-index: -1;
 }
-.timeline-textbox h2{
+.timeline-textbox h2 {
   font-weight: 600;
   color: rgb(0, 128, 255, 0.8);
 }
-.timeline-textbox small{
+.timeline-textbox small {
   display: inline-block;
-  margin-bottom:15px;
+  margin-bottom: 15px;
   position: absolute;
-  top:-2em;
+  top: -2em;
 }
-.left-container-arrow{
+.left-container-arrow {
   height: 0;
   width: 0;
   position: absolute;
@@ -811,10 +839,10 @@ header{
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-left: 15px solid  rgb(245, 245, 245, 0.4);
+  border-left: 15px solid rgb(245, 245, 245, 0.4);
   right: -15px;
 }
-.right-container-arrow{
+.right-container-arrow {
   height: 0;
   width: 0;
   position: absolute;
@@ -827,38 +855,40 @@ header{
 }
 /***************RESPONSIVENESS*****************/
 @media (max-width: 800px) {
-  .timeline{
+  .timeline {
     margin: 50px auto;
   }
-  .timeline::after{
+  .timeline::after {
     left: 40px;
   }
-  .timeline-container{
+  .timeline-container {
     width: 100%;
     padding-left: 80px;
     padding-right: 25px;
   }
-  .timeline-textbox{
+  .timeline-textbox {
     font-size: 13px;
   }
-  .timeline-textbox{
+  .timeline-textbox {
     margin-bottom: 10px;
   }
-  .right-container{
+  .right-container {
     left: 0;
   }
-  .left-container img, .right-container img{
+  .left-container img,
+  .right-container img {
     left: 18px;
   }
-  .left-container-arrow, .right-container-arrow{
-    border-right: 15px solid  rgb(245, 245, 245, 0.4);
+  .left-container-arrow,
+  .right-container-arrow {
+    border-right: 15px solid rgb(245, 245, 245, 0.4);
     border-left: 0;
     left: -15px;
   }
 }
 /*Project*/
 
-.project-container{
+.project-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -866,54 +896,59 @@ header{
   grid-row-gap: 1em;
 }
 
-#project-title { grid-area: 1 / 1 / 2 / 4; }
-#project1 { grid-area: 2 / 1 / 6 / 4; }
-#project2 { grid-area: 1 / 4 / 6 / 6; }
+#project-title {
+  grid-area: 1 / 1 / 2 / 4;
+}
+#project1 {
+  grid-area: 2 / 1 / 6 / 4;
+}
+#project2 {
+  grid-area: 1 / 4 / 6 / 6;
+}
 
-@media only screen and (max-width: 1024px){
-  .section{
+@media only screen and (max-width: 1024px) {
+  .section {
     padding-top: 4em;
     display: flex;
     padding-left: 4em;
     padding-right: 1em;
     padding-bottom: 4em;
-    
   }
-  .project-container{
+  .project-container {
     padding: none;
     display: flex;
     flex-direction: column;
   }
 }
 
-.section p, h4{
+.section p,
+h4 {
   color: white;
 }
 
-.section h3{
+.section h3 {
   color: white;
   font-size: 45px;
   margin-right: 10px;
 }
 
-.project-info{
+.project-info {
   padding-top: 7px;
 }
 @media only screen and (max-width: 600px) {
-  .project-info p{
+  .project-info p {
     font-size: 1em;
   }
 }
 
-.project-button :hover{
+.project-button :hover {
   background-color: #000;
   opacity: 0.5;
 }
 
-
 /*Footer*/
 
-footer{
+footer {
   height: auto;
   width: 100%;
   color: whitesmoke;
@@ -921,53 +956,53 @@ footer{
   background-size: cover;
   background-position: top center;
   line-height: 1;
-  padding-top:10em;
-  padding-bottom:2em;
-  overflow:hidden;
+  padding-top: 10em;
+  padding-bottom: 2em;
+  overflow: hidden;
 }
 @media only screen and (max-width: 1024px) {
-  footer{
+  footer {
     padding-left: 1em;
   }
 }
 
-footer ul{
+footer ul {
   list-style: none;
   width: 60%;
 }
 
-footer h3{
+footer h3 {
   font-size: 8em;
   width: 40%;
 }
 
-footer hr{
+footer hr {
   width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
-  footer ul{
+  footer ul {
     width: 100%;
   }
-  
-  footer h3{
+
+  footer h3 {
     font-size: 3em;
     width: 40%;
   }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-  footer ul{
+  footer ul {
     width: 100%;
   }
-  
-  footer h3{
+
+  footer h3 {
     font-size: 6em;
     width: 40%;
   }
 }
 
-.arrow-container{
+.arrow-container {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
@@ -976,34 +1011,44 @@ footer hr{
   padding-right: 1em;
 }
 
-.arrow-up{
+.arrow-up {
   height: 10em;
   margin-bottom: 1.5em;
   color: #dc1c31;
 }
 @media only screen and (max-width: 600px) {
-  .arrow-up{
+  .arrow-up {
     height: 4em;
   }
 }
-@media only screen and (min-width: 601px) and (max-width: 1024px){
-  .arrow-up{
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .arrow-up {
     height: 8em;
   }
 }
 
-.arrow-up:hover{
+.arrow-up:hover {
   color: whitesmoke;
-  
 }
 
 .bounce {
   animation: bounce2 3s ease infinite;
 }
 @keyframes bounce {
-    0%, 8%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-    5% {transform: translateY(-18px);}
-    11% {transform: translateY(-10px);}
+  0%,
+  8%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  5% {
+    transform: translateY(-18px);
+  }
+  11% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes scroll {
@@ -1019,7 +1064,7 @@ footer hr{
   animation: scroll 30s linear infinite;
 }
 
-.iconslider-container{
+.iconslider-container {
   width: 100%;
   height: 150px;
   overflow: hidden;
@@ -1029,21 +1074,22 @@ footer hr{
   justify-content: center;
   background-color: #cdcdcd;
 }
-.iconslider-animate{
+.iconslider-animate {
   width: 80%;
   height: 150px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: absolute;
+  overflow: hidden;
 }
 @media only screen and (max-width: 600px) {
-  .iconslider-animate{
-    left: 3.5em;
+  .iconslider-animate {
+    left: 5.5em;
   }
 }
 
-.slider-icon{
+.slider-icon {
   height: 80px;
   margin-right: 3rem;
   color: rgb(45, 147, 249, 0.9);

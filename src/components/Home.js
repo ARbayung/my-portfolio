@@ -8,17 +8,19 @@ import Timeline from "./Timeline";
 import Footer from "./Footer";
 import Iconslider from "./Iconslider";
 
-function Home(){
-    return <div>
-        <Navbar/>
-    <Social/>
-    <Hero/>
-    <Project/>
-    <Aboutme/>
-    <Iconslider/>
-    <Timeline/>
-    <Footer/>
+function Home() {
+  return (
+    <div>
+      <Navbar />
+      <Social />
+      <Hero />
+      <Project />
+      <Aboutme />
+      <Iconslider />
+      <Timeline />
+      <Footer />
     </div>
+  );
 }
 
 export default Home;
