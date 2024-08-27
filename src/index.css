@@ -300,19 +300,39 @@ a:focus::after {
 }
 
 /*Hero*/
-
+/* 
 header {
   position: static;
-  /* background-image:url("https://www.shadergradient.co/customize"); */
-
+  background-image:url("./components/images/sphere.gif");
   background-size: cover;
-  background-position: top center;
-}
-@media only screen and (max-width: 1024px) {
+  background-position: center center;
+} */
+/* @media only screen and (max-width: 1024px) {
   header {
     background-position: bottom left;
   }
+} */
+
+.background{
+  position: fixed;
+  background-image:url("./components/images/sphere.gif");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  z-index: -1;
 }
+
+/* body{
+  position: fixed;
+  background-image:url("./components/images/sphere.gif");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+} */
 
 .container-hero {
   padding-left: 3em;
@@ -328,6 +348,7 @@ header {
     padding-left: 2em;
   }
 }
+
 @keyframes fade-right {
   0% {
     opacity: 0;
@@ -382,7 +403,7 @@ header {
 .button-hero {
   height: 12vh;
   width: 90%;
-  border-radius: 40px;
+  border-radius: 50px;
   font-family: "Red Hat Text", sans-serif;
   font-size: 1.2em;
   border: 2px solid;
@@ -953,8 +974,6 @@ footer {
   width: 100%;
   color: whitesmoke;
   padding-left: 4em;
-  background-size: cover;
-  background-position: top center;
   line-height: 1;
   padding-top: 10em;
   padding-bottom: 2em;
