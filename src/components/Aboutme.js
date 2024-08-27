@@ -10,16 +10,14 @@ const Aboutme = () => {
       <div class="about-section flex reveal">
         <div class="about-text">
           <h2 class="section-sub2">MY SKILLS</h2>
-          <h1 class="section-title2">EXPERIENCE.</h1>
+          <h1 class="section-title2">ABOUTME.</h1>
           <p class="section-p2 mt">
             Self-taught web developer passionate about designing and developing
             web applications. Completed a web development bootcamp on edX,
             gaining valuable skills and knowledge. Secured an internship with
-            "SinclairLondon," where I redesigned their Loyalty scheme and page,
+            SinclairLondon, an Ecommerce business. I redesigned their Loyalty scheme page and,
             contributed to a successful Christmas campaign that garnered over
-            100 thousand visitors in a month, and initiated an SEO strategy.
-            Love for design fuels my ambition to become a full-stack developer.
-            Let's create something extraordinary together!
+            100 thousand visitors in a month.
           </p>
           <img src={arrow} alt="arrow" class="hero-arrrow" />
         </div>

@@ -17,7 +17,7 @@ function Hero() {
           >
             DOWNLOAD CV
           </a>
-          <hr></hr>
+          <hr class="hidden-hr"></hr>
           <div>
             <h2 class="hero-h2">FRONT- END DEVELOPER</h2>
           </div>

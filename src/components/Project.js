@@ -13,13 +13,19 @@ function Project() {
         </div>
         <div class="project-item reveal" id="project1">
           <div class="project-button">
-            <Link to="/SinclairLondon">
+            {/* <Link to="/SinclairLondon">
               <img
                 src={SinclairLondon}
                 alt="SinclairLondonimg"
                 class="project-img"
               />
-            </Link>
+            </Link> */}
+            <a
+            href="https://sinclairlondon.com/"
+            class="project-button"
+          >
+            <img src={SinclairLondon} alt="RecipeFinderApp" class="project-img"></img>
+          </a>
           </div>
           <hr></hr>
           <div class="project-details flex">

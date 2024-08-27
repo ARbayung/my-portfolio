@@ -6,7 +6,6 @@ import Project from "./Project";
 import Aboutme from "./Aboutme";
 import Timeline from "./Timeline";
 import Footer from "./Footer";
-import Iconslider from "./Iconslider";
 
 function Home() {
   return (
@@ -16,7 +15,6 @@ function Home() {
       <Hero />
       <Project />
       <Aboutme />
-      <Iconslider />
       <Timeline />
       <Footer />
     </div>
