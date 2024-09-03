@@ -2,6 +2,7 @@ import React from "react";
 import Recipe from "./images/recipe-finder1.png";
 import SinclairLondon from "./images/sinclairlondon.png";
 import { Outlet, Link } from "react-router-dom";
+import DriPhotoraphy from "./images/dri-photography.png";
 
 function Project() {
   return (
@@ -39,6 +40,7 @@ function Project() {
           </div>
           <hr></hr>
         </div>
+
         <div class="project-item reveal" id="project2">
           <a
             href="https://adammbnitro.github.io/Recipe-API-Instructions"
@@ -56,9 +58,29 @@ function Project() {
           </div>
           <hr></hr>
         </div>
+
+        <div class="project-item reveal" id="project3">
+          <a
+            href="https://dri-photography.vercel.app/"
+            class="project-button"
+          >
+            <img src={DriPhotoraphy} alt="dri-photography" class="project-img"></img>
+          </a>
+          <hr></hr>
+          <div class="project-details flex">
+            <h3>03</h3>
+            <div class="project-info">
+              <h4 class="card-title">Dri Photogrpahy - in process</h4>
+              <p>2024 - Freelance - React / Magic.ui /tailwind </p>
+            </div>
+          </div>
+          <hr></hr>
+        </div>
       </div>
+      
       <Outlet />
     </section>
+
   );
 }
 
