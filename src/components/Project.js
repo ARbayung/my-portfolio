@@ -71,7 +71,7 @@ function Project() {
             <h3>03</h3>
             <div class="project-info">
               <h4 class="card-title">Dri Photogrpahy - in process</h4>
-              <p>2024 - Freelance - React / Magic.ui /tailwind </p>
+              <p>2024 - Freelance - React / Magic.ui / tailwind </p>
             </div>
           </div>
           <hr></hr>
